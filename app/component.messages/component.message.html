@@ -1,0 +1,6 @@
+
+<div class="wrap" *ngIf="mesagServ.messager.length">
+    <h2>Message</h2>
+    <button (click)="mesagServ.clear()">clear</button>
+    <div *ngFor="let mess of mesagServ.messager">{{mess}}</div>
+</div>
