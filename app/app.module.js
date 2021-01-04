@@ -14,13 +14,16 @@ var heroes_1 = require("./heroes/heroes");
 var hero_details_1 = require("./hero-details/hero-details");
 var component_messagers_1 = require("../app/component.messages/component.messagers");
 var message_service_1 = require("../app/component.messages/message.service");
+var royting_module_1 = require("../app/royting.module");
+var dashboard_1 = require("../app/dashboard/dashboard");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, heroes_1.Heroes, hero_details_1.HeroDetails, component_messagers_1.ComponentMessager],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, royting_module_1.RoutingModule],
+            declarations: [app_component_1.AppComponent, heroes_1.Heroes, hero_details_1.HeroDetails,
+                component_messagers_1.ComponentMessager, dashboard_1.DashboardComponenet],
             bootstrap: [app_component_1.AppComponent],
             providers: [message_service_1.MessageService]
         })

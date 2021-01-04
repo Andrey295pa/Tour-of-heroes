@@ -2,6 +2,11 @@
 
 <div class="body">
     <h1>{{title}}  </h1> 
-    <my-heroes></my-heroes>
+    <nav>
+        <a routerLink="/heroes">Heroes</a>
+        <a routerLink="/dashboadr">Dashboard</a>
+    </nav>
+    <router-outlet></router-outlet>
+    <!-- <my-heroes></my-heroes> -->
     <component-messager></component-messager>
 </div>
