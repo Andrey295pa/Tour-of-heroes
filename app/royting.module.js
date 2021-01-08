@@ -10,9 +10,11 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var heroes_1 = require("../app/heroes/heroes");
 var dashboard_1 = require("../app/dashboard/dashboard");
+var hero_details_1 = require("../app/hero-details/hero-details");
 var routers = [
     { path: 'heroes', component: heroes_1.Heroes },
     { path: 'dashboadr', component: dashboard_1.DashboardComponenet },
+    { path: 'detail/:id', component: hero_details_1.HeroDetails },
     { path: '', redirectTo: '/dashboadr', pathMatch: 'full' },
 ];
 var RoutingModule = /** @class */ (function () {

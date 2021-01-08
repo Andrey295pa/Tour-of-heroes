@@ -54,7 +54,7 @@ import {MessageService} from "../component.messages/message.service";
         border-radius: 4px 0 0 4px;
       }
      `],
-     providers:[HeroService]
+    //  providers:[HeroService]
     //  styleUrls:["/app/heroes/heroes.css"]
 })
 export class Heroes implements OnInit{

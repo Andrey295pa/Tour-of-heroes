@@ -2,6 +2,7 @@
 import{NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import {HeroService} from "../app/service/hero.servise";
 
 
 import{AppComponent} from "./app.component";
@@ -18,7 +19,7 @@ import {DashboardComponenet} from "../app/dashboard/dashboard";
     declarations:[AppComponent,Heroes,HeroDetails,
                 ComponentMessager,DashboardComponenet],
     bootstrap:[AppComponent],
-    providers:[MessageService]
+    providers:[MessageService,HeroService]
 })
 export class AppModule{
 

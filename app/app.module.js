@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var hero_servise_1 = require("../app/service/hero.servise");
 var app_component_1 = require("./app.component");
 var heroes_1 = require("./heroes/heroes");
 var hero_details_1 = require("./hero-details/hero-details");
@@ -25,7 +26,7 @@ var AppModule = /** @class */ (function () {
             declarations: [app_component_1.AppComponent, heroes_1.Heroes, hero_details_1.HeroDetails,
                 component_messagers_1.ComponentMessager, dashboard_1.DashboardComponenet],
             bootstrap: [app_component_1.AppComponent],
-            providers: [message_service_1.MessageService]
+            providers: [message_service_1.MessageService, hero_servise_1.HeroService]
         })
     ], AppModule);
     return AppModule;
