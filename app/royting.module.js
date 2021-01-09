@@ -15,6 +15,7 @@ var routers = [
     { path: 'heroes', component: heroes_1.Heroes },
     { path: 'dashboadr', component: dashboard_1.DashboardComponenet },
     { path: 'detail/:id', component: hero_details_1.HeroDetails },
+    { path: 'det', component: hero_details_1.HeroDetails },
     { path: '', redirectTo: '/dashboadr', pathMatch: 'full' },
 ];
 var RoutingModule = /** @class */ (function () {

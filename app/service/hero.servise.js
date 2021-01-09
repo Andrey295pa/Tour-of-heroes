@@ -24,6 +24,10 @@ var HeroService = /** @class */ (function () {
         this.MessService.add("first text for message");
         return of_1.of(mock_hero_1.HeroesAll);
     };
+    HeroService.prototype.getHero = function (id) {
+        this.MessService.add("HeroService: fetched hero id=" + id);
+        return of_1.of(mock_hero_1.HeroesAll.find(function (hero) { return hero.id === id; }));
+    };
     HeroService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [message_service_1.MessageService])

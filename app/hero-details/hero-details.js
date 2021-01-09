@@ -10,9 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+var hero_servise_1 = require("../service/hero.servise");
 var HeroDetails = /** @class */ (function () {
-    function HeroDetails() {
+    function HeroDetails(route, location, heroService) {
+        this.route = route;
+        this.location = location;
+        this.heroService = heroService;
     }
+    HeroDetails.prototype.getHero = function () {
+        var _this = this;
+        var id = +this.route.snapshot.params['id'];
+        this.heroService.getHero(id)
+            .subscribe(function (hero) { return _this.hero = hero; });
+    };
+    HeroDetails.prototype.goBack = function () {
+        this.location.back();
+    };
+    HeroDetails.prototype.ngOnInit = function () {
+        this.getHero();
+    };
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
@@ -23,7 +41,10 @@ var HeroDetails = /** @class */ (function () {
             selector: "hero-details",
             templateUrl: "/app/hero-details/hero-details.html",
             styleUrls: [""]
-        })
+        }),
+        __metadata("design:paramtypes", [router_1.ActivatedRoute,
+            common_1.Location,
+            hero_servise_1.HeroService])
     ], HeroDetails);
     return HeroDetails;
 }());

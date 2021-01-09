@@ -9,6 +9,7 @@ const routers:Routes=[
     {path:'heroes', component:Heroes},
     {path:'dashboadr', component:DashboardComponenet},
     {path:'detail/:id', component:HeroDetails},
+    {path:'det', component:HeroDetails},
     { path: '', redirectTo: '/dashboadr', pathMatch: 'full' },
  ];
 

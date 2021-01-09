@@ -19,7 +19,8 @@ var Heroes = /** @class */ (function () {
     }
     Heroes.prototype.getHeroes = function () {
         var _this = this;
-        this.heroService.getHerroesAll().subscribe(function (heroes) { return _this.heroes = heroes; });
+        this.heroService.getHerroesAll()
+            .subscribe(function (heroes) { return _this.heroes = heroes; });
     };
     Heroes.prototype.ngOnInit = function () {
         // throw new Error('Method not implemented.');
@@ -35,7 +36,7 @@ var Heroes = /** @class */ (function () {
             moduleId: module.id,
             selector: "my-heroes",
             templateUrl: "/app/heroes/heroes.html",
-            styles: ["\n     .heroes {\n        margin: 0 0 2em 0;\n        list-style-type: none;\n        padding: 0;\n        width: 15em;\n      }\n      .heroes li {\n        cursor: pointer;\n        position: relative;\n        left: 0;\n        background-color: #EEE;\n        margin: .5em;\n        padding: .3em 0;\n        height: 1.6em;\n        border-radius: 4px;\n      }\n      .heroes li:hover {\n        color: #607D8B;\n        background-color: #DDD;\n        left: .1em;\n      }\n      .heroes li.selected {\n        background-color: #CFD8DC;\n        color: white;\n      }\n      .heroes li.selected:hover {\n        background-color: #BBD8DC;\n        color: white;\n      }\n      .heroes .badge {\n        display: inline-block;\n        font-size: small;\n        color: white;\n        padding: 0.8em 0.7em 0 0.7em;\n        background-color:#405061;\n        line-height: 1em;\n        position: relative;\n        left: -1px;\n        top: -4px;\n        height: 1.8em;\n        margin-right: .8em;\n        border-radius: 4px 0 0 4px;\n      }\n     "],
+            styles: ["\n.heroes {\n  margin: 0 0 2em 0;\n  list-style-type: none;\n  padding: 0;\n  width: 15em;\n}\n.heroes li {\n  position: relative;\n  cursor: pointer;\n  background-color: #EEE;\n  margin: .5em;\n  padding: .3em 0;\n  height: 1.6em;\n  border-radius: 4px;\n}\n\n.heroes li:hover {\n  color: #607D8B;\n  background-color: #DDD;\n  left: .1em;\n}\n\n.heroes a {\n  color: #333;\n  text-decoration: none;\n  position: relative;\n  display: block;\n  width: 250px;\n}\n\n.heroes a:hover {\n  color:#607D8B;\n}\n\n.heroes .badge {\n  display: inline-block;\n  font-size: small;\n  color: white;\n  padding: 0.8em 0.7em 0 0.7em;\n  background-color:#405061;\n  line-height: 1em;\n  position: relative;\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  min-width: 16px;\n  text-align: right;\n  margin-right: .8em;\n  border-radius: 4px 0 0 4px;\n}\n     "],
         }),
         __metadata("design:paramtypes", [hero_servise_1.HeroService, message_service_1.MessageService])
     ], Heroes);
